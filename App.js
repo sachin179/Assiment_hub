@@ -24,9 +24,11 @@ import {
 import {DrawerContent} from './screens/DrawerContent';
 
 import MainTabScreen from './screens/MainTabScreen';
-import SupportScreen from './screens/SupportScreen';
+import TakePicture from './screens/TakePicture';
 import SettingsScreen from './screens/SettingsScreen';
-import BookmarkScreen from './screens/BookmarkScreen';
+import PredictionResultScreen from './screens/PredictionResultScreen';
+import HelpScreen from './screens/HelpScreen';
+// import testScreen from './screens/testScreen';
 
 import {AuthContext} from './components/context';
 
@@ -177,11 +179,13 @@ const App = () => {
             <Drawer.Navigator
               drawerContent={props => <DrawerContent {...props} />}>
               <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
-              <Drawer.Screen name="SupportScreen" component={SupportScreen} />
+              <Drawer.Screen name="TakePicture" component={TakePicture} />
               <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
-              <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
-              {/* <Drawer.Screen name="Bookmark" component={BookmarkScreen} />
-              <Drawer.Screen name="Support" component={SupportScreen} /> */}
+              <Drawer.Screen
+                name="PredictionResultScreen"
+                component={PredictionResultScreen}
+              />
+              <Drawer.Screen name="HelpScreen" component={HelpScreen} />
             </Drawer.Navigator>
           ) : (
             <RootStackScreen />

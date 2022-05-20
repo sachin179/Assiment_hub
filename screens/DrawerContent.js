@@ -81,25 +81,16 @@ export function DrawerContent(props) {
               )}
               label="Help"
               onPress={() => {
-                props.navigation.navigate('BookmarkScreen');
+                props.navigation.navigate('HelpScreen');
               }}
             />
-            {/* <DrawerItem
-              icon={({color, size}) => (
-                <Icon name="settings-outline" color={color} size={size} />
-              )}
-              label="Setting"
-              onPress={() => {
-                props.navigation.navigate('SettingScreen');
-              }}
-            /> */}
             <DrawerItem
               icon={({color, size}) => (
                 <Icon name="camera" color={color} size={size} />
               )}
               label="Camera"
               onPress={() => {
-                props.navigation.navigate('SupportScreen');
+                props.navigation.navigate('TakePicture');
               }}
             />
           </Drawer.Section>

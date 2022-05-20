@@ -114,7 +114,7 @@ const HomeStackScreen = ({navigation}) => {
                 color={colors.text}
                 backgroundColor={colors.background}
                 onPress={() => {
-                  navigation.navigate('SupportScreen');
+                  navigation.navigate('TakePicture');
                 }}
               />
               <TouchableOpacity

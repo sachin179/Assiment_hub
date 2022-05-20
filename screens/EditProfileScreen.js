@@ -118,6 +118,7 @@ const EditProfileScreen = () => {
                 source={{
                   uri: image,
                 }}
+                // eslint-disable-next-line react-native/no-inline-styles
                 style={{height: 100, width: 100}}
                 imageStyle={{borderRadius: 15}}>
                 <View
@@ -130,6 +131,7 @@ const EditProfileScreen = () => {
                     name="camera"
                     size={35}
                     color="#fff"
+                    // eslint-disable-next-line react-native/no-inline-styles
                     style={{
                       opacity: 0.7,
                       alignItems: 'center',
@@ -143,9 +145,7 @@ const EditProfileScreen = () => {
               </ImageBackground>
             </View>
           </TouchableOpacity>
-          <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}}>
-            John Doe
-          </Text>
+          <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}} />
         </View>
 
         <View style={styles.action}>

@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ImageBackground,
   StyleSheet,
+  Button,
 } from 'react-native';
 
 import {useTheme} from 'react-native-paper';
@@ -17,7 +18,24 @@ import Animated from 'react-native-reanimated';
 
 import ImagePicker from 'react-native-image-crop-picker';
 
-const EditProfileScreen = () => {
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  button: {
+    padding: 15,
+    borderRadius: 10,
+    backgroundColor: '#FF6347',
+    alignItems: 'center',
+    marginTop: 175,
+  },
+});
+
+const ScreenContainer = ({children}) => (
+  <View styles={style.container}>{children}</View>
+);
+
+const EditProfileScreen = ({navigation}) => {
   const [image, setImage] = useState(
     'https://api.adorable.io/avatars/80/abott@adorable.png',
   );
@@ -124,7 +142,7 @@ const EditProfileScreen = () => {
                   }}>
                   <Icon
                     name="camera"
-                    size={35}
+                    size={55}
                     color="#666666"
                     style={{
                       opacity: 0.7,
@@ -139,11 +157,8 @@ const EditProfileScreen = () => {
               </ImageBackground>
             </View>
           </TouchableOpacity>
-          <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}}>
-            John Doe
-          </Text>
+          <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}} />
         </View>
-
         {/* <View style={styles.action}>
           <FontAwesome name="user-o" color={colors.text} size={20} />
           <TextInput
@@ -230,9 +245,13 @@ const EditProfileScreen = () => {
             ]}
           />
         </View> */}
-        <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
-          <Text style={styles.panelButtonTitle}>PREDICT</Text>
-        </TouchableOpacity>
+        <ScreenContainer>
+          <Text></Text>
+          <Button
+            title="Prediction"
+            onPress={() => navigation.navigate('PredictionResultScreen')}
+          />
+        </ScreenContainer>
       </Animated.View>
     </View>
   );
